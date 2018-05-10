@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\News;
+use File;
+// use Intervention\Image\ImageManagerStatic as Image;
+
 
 class AdminNewsController extends Controller
 {
@@ -46,6 +49,50 @@ class AdminNewsController extends Controller
 
 
       if($news->save()) {
+        return redirect("/admin/news/");
+      } else {
+        die("Server is on construction...");
+      }
+    }
+
+    public function edit($id)
+    {
+      $news = News::find($id);
+      return view("admin.news.update", [
+        "news" => $news
+      ]);
+    }
+
+    public function update(Request $request)
+    {
+      $news = News::find($request->id);
+      $news->title = $request->title;
+
+      if($request->hasfile('image'))
+     {
+
+        foreach($request->file('image') as $image)
+        {
+            $name=$image->getClientOriginalName();
+            $image->move(public_path().'/assets/admin/images/uploads/', $name);
+            $imagename = $name;
+        }
+
+        if(File::exists(public_path().'/assets/admin/images/uploads/', $news->image)) {
+          @unlink(public_path()."/assets/admin/images/uploads/{$news->image}");
+        }
+     } else {
+       $imagename = public_path()."/assets/admin/images/uploads/{$request->image}";
+     }
+
+      $news->image = $imagename;
+      $news->description = $request->content;
+      $news->author = $request->author;
+      $news->category = $request->category;
+
+
+
+      if($news->update()) {
         return redirect("/admin/news/");
       } else {
         die("Server is on construction...");

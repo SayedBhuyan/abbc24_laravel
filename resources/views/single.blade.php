@@ -26,7 +26,7 @@
     <div class="card">
       <div class="card-body">
         <img class="author-image" src="{{ asset('assets') }}/img/author-1.jpg" alt="">
-        <h5 class="card-title">ব্যারিস্টার মনির হোসেন</h5>
+        <h5 class="card-title">{{ $news->author }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">29055 Followers</h6>
         <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
         <ul class="list-group mb-2">

@@ -122,9 +122,9 @@
         @foreach($news as $slnews)
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 sngl">
             <div class="hovereffect">
-                <img class="img-responsive" src="{{ asset('assets') }}/img/1.jpg" alt="">
+                <img class="img-responsive" src="{{ asset('assets/admin/images/uploads') }}/{{$slnews->image}}" alt="{{$slnews->title}}">
                 <div class="overlay">
-                   <h2>{{ $slnews->title }}ে</h2>
+                   <h2>{{ $slnews->title }}</h2>
                    <a class="info" href="{{ url('/single') }}/{{ $slnews->id }}">পড়ুন...</a>
                 </div>
             </div>

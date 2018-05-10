@@ -25,3 +25,6 @@ Route::get("/admin/news", "AdminNewsController@index");
 Route::get("/admin/news/new", "AdminNewsController@create");
 Route::post("/admin/news", "AdminNewsController@store");
 Route::delete("admin/news/delete/{id}", "AdminNewsController@destroy");
+
+Route::get("admin/news/edit/{id}", "AdminNewsController@edit");
+Route::put("admin/news/{id}", "AdminNewsController@update");

@@ -27,7 +27,7 @@
           <tbody>
             @foreach($news as $slnews)
             <tr>
-              <td><a href="{{ url('/admin/news/update') }}">{{ $slnews->title }}</a></td>
+              <td><a href="{{ url('/admin/news/edit') }}/{{$slnews->id}}">{{ $slnews->title }}</a></td>
               <td><img width="70" height="70" src="{{ asset('assets/admin/images/uploads') }}/{{ $slnews->image }}" alt=""></td>
               <td>{{ str_limit($slnews->description, $limit = 100, $end = '...') }}</td>
               <td>{{ $slnews->author }}</td>
@@ -35,12 +35,12 @@
               <td>{{ $slnews->created_at }}</td>
               <td>{{ $slnews->updated_at }}</td>
               <td>
-                <a href="{{ url('/admin/news/update') }}" class="btn btn-xs btn-info">Update</a>
+                <a href="{{ url('/admin/news/edit') }}/{{$slnews->id}}" class="btn btn-xs btn-info">Update</a>
 
                 <form action="{{ url('/admin/news/delete') }}/{{$slnews->id}}" method="POST">
                   @method('DELETE')
                   @csrf
-                  <input type="submit" class="btn btn-xs btn-danger" value="Delete">
+                  <input onclick="return confirm('Are you sure you want to delete this news?')" type="submit" class="btn btn-xs btn-danger" value="Delete">
 
                 </form>
               </td>
