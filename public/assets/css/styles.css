@@ -1,0 +1,138 @@
+
+
+
+/* header */
+.main-header {
+  padding: 30px 0;
+}
+
+.logo img {
+  width: 200px;
+  height: 75px;
+  border-radius: 5px;
+  border: 5px solid #000;
+}
+
+/* nav */
+nav.navbar .row {
+  width: 100%
+}
+.breadcrumb-nav {
+  background: #E9ECEF;
+  margin-bottom: 1rem;
+}
+.breadcrumb {
+  margin-bottom: 0
+}
+
+.sidebar {}
+.card {
+  margin-bottom: 35px;
+}
+.card .card-title a {
+  color: #212529
+}
+
+.author-social {}
+.author-social li {
+  list-style: none;
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px
+}
+.author-social li:last-child {
+  margin-right: 0
+}
+.author-social li a {}
+.author-social li a img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Section: Live TV */
+.live-tv-section {
+  margin: 30px 0 60px
+}
+.display {
+  display: block;
+  height: 450px;
+  background: #000
+}
+.display-programs {
+  display: block;
+  height: 450px;
+  background: #E9ECEF;
+}
+
+.display-programs .nav-item a {
+  border-radius: 0;
+}
+.ns-1 {
+  overflow-y: scroll;
+  height: 395px;
+}
+.ns-1 a {
+    color: #000;
+    text-decoration: none
+}
+.display-programs .list-group-item {
+  border-radius: 0
+}
+
+/*  sidebar left */
+
+.sidebar-left {}
+.sidebar-left .author-image {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 10px
+}
+
+/* footer */
+.deep-purple {}
+
+footer.unique-color-dark {
+  background: #3E4551;
+  color: #fff
+}
+footer.unique-color-dark a {
+  color: #fff;
+}
+.footer-copyright {
+  background: #323741
+}
+
+
+/* sec head */
+.sec-head {
+  border-bottom: 5px solid #EF1E23;
+  text-align: center;
+  width: 100%;
+  margin: 30px 0
+}
+
+
+/* latest section */
+#sec-latest {
+  background: #3E4551;
+  color: #fff
+}
+#sec-plays {
+  background: #323741;
+  color: #fff
+}
+#sec-international {
+  background: #3E4551;
+  color: #fff
+}
+.categories-section {}
+.categories-section .sngl {
+  margin-bottom: 30px
+}
+.categories-section .sngl img {
+  width: 100%;
+  height: 100%;
+}
